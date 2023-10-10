@@ -1,0 +1,7 @@
+@model IEnumerable<Category>
+<ul>
+  @foreach (Category category in Model)
+  {
+    <li>@category.CategoryName - @category.Description</li>
+  }
+</ul>
