@@ -1,0 +1,8 @@
+@model IEnumerable<Discount>
+<div class="list-view">
+  @foreach (Discount discount in Model)
+  {
+    @discount.Title <small>@discount.DiscountPercent - </small><span id="discount-list-description">@discount.Description</span>
+    <br>
+  }
+</div>

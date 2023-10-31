@@ -1,7 +1,16 @@
 @model IEnumerable<Category>
-<ul>
+<div class="list-view">
   @foreach (Category category in Model)
   {
-    <li>@category.CategoryName - @category.Description</li>
+    <a asp-action="Index" asp-route-id="@category.CategoryId">@category.CategoryName<small> - @category.Description</small></a>
+    <br>
   }
-</ul>
+</div>
+@* @model IEnumerable<Discount>
+<div class="list-view">
+  @foreach (Discount discount in Model)
+  {
+    <a asp-action="Active" asp-route-id="@discount.DiscountId">@discount.Title (@discount.DiscountPercent)<small> - @discount.Description</small></a>
+    <br>
+  }
+</div> *@

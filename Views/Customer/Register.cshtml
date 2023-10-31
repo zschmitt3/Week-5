@@ -1,0 +1,23 @@
+@model Customer
+    <div asp-validation-summary="All"></div>
+    <form asp-controller="Customer" asp-action="NewCustomer" method="post">
+        <label asp-for="CompanyName">Company Name:</label><br>
+        @* <span runat="server" id="noNull" class="inactive">A company name is required.</span>
+        <span runat="server" id="repeatName" class="inactive">This name is already in use.</span> *@
+        <input type="text" asp-for="CompanyName"><br>
+        <label asp-for="Address">Address:</label><br>
+        <input type="text" asp-for="Address"><br>
+        <label asp-for="City">City:</label><br>
+        <input type="text" asp-for="City"><br>
+        <label asp-for="Region">Region:</label><br>
+        <input type="text" asp-for="Region"><br>
+        <label asp-for="PostalCode">Postal Code:</label><br>
+        <input type="text" asp-for="PostalCode"><br>
+        <label asp-for="Country">Country:</label><br>
+        <input type="text" asp-for="Country"><br>
+        <label asp-for="Phone">Phone:</label><br>
+        <input type="text" asp-for="Phone"><br>
+        <label asp-for="Fax">Fax:</label><br>
+        <input type="text" asp-for="Fax"><br>
+        <button type="submit">Submit</button>
+    </form>
